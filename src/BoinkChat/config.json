@@ -1,0 +1,11 @@
+﻿{
+  "AppSettings": {
+    "SiteTitle": "BoinkChat"
+  },
+  "Data": {
+    "DefaultConnection": {
+      "SqliteConnectionString": "Data Source=.\\boinkchat.sqlite",
+      "ConnectionString": "Server=(localdb)\\mssqllocaldb;Database=BoinkChat;Trusted_Connection=True;MultipleActiveResultSets=true"
+    }
+  }
+}
