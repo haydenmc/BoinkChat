@@ -7,11 +7,12 @@
     "Microsoft.AspNet.Mvc": "6.0.0-beta8",
     "Microsoft.AspNet.StaticFiles": "1.0.0-beta8",
     "EntityFramework.Commands": "7.0.0-beta8",
+    "Microsoft.Framework.Configuration": "1.0.0-rc1-15666",
     "Microsoft.Framework.Configuration.Json": "1.0.0-beta8",
     "EntityFramework.Core": "7.0.0-beta8",
     "EntityFramework.SqlServer": "7.0.0-beta8",
     "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta8",
-    "Microsoft.AspNet.SignalR.Server": "3.0.0-beta5"
+    "Microsoft.AspNet.SignalR.Server": "3.0.0-beta8*"
   },
   "commands": {
     "web": "Microsoft.AspNet.Server.Kestrel"
@@ -22,7 +23,7 @@
         "Microsoft.Framework.Configuration.Json": "1.0.0-beta5"
       }
     },
-    "dnxcore50": { }
+    "dnxcore50": {}
   },
   "publishExclude": [
     "node_modules",

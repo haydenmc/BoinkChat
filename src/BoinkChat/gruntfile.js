@@ -16,6 +16,7 @@ module.exports = function (grunt) {
             target: {
                 files: [
                     { src: 'node_modules/webcomponents.js/webcomponents.min.js', dest: 'wwwroot/webcomponents.js' },
+                    { expand: true, flatten: true, src: 'Scripts/Libraries/**', dest: 'wwwroot/', filter: 'isFile'},
                     { src: 'Templates/index.html', dest: 'wwwroot/index.html' }
                 ]
             }

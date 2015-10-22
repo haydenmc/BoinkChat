@@ -3,11 +3,39 @@
 <head>
     <meta charset="utf-8" />
     <title>Why halloooooo</title>
+    <script src="jquery-1.6.4.min.js"></script>
+    <script src="jquery.signalr-2.2.0.min.js"></script>
     <script src="webcomponents.js"></script>
     <script src="application.js"></script>
     <script src="/signalr/js"></script>
 </head>
 <body>
     <h1>Why halloooooooo</h1>
+    <ui-application>
+        <ui-chat data-context="{{messages}}"></ui-chat>
+        <ui-composer></ui-composer>
+    </ui-application>
+
+    <template id="ui-chat">
+        <ui-repeater>
+            <template>
+                <ui-message />
+            </template>
+        </ui-repeater>
+    </template>
+
+    <template id="ui-message">
+        <style>
+            :host {
+                display: block;
+            }
+        </style>
+        {{authorName}}: {{body}}
+    </template>
+
+    <template id="ui-composer">
+        <input />
+        <button data-event-click="send">Send</button>
+    </template>
 </body>
 </html>

@@ -214,3 +214,4 @@ ModelManifest.xml
 # BoinkChat files
 **/Scripts/Ts/**/*.js
 **/wwwroot
+**/.tscache
