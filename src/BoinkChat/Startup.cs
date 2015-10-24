@@ -44,6 +44,7 @@ namespace BoinkChat
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseDefaultFiles();
             app.UseStaticFiles();
             app.UseMvc(routes =>
             {
@@ -53,7 +54,6 @@ namespace BoinkChat
             });
             app.UseWebSockets();
             app.UseSignalR();
-            //new ApplicationDbContext().Database.Migrate();
         }
     }
 }
