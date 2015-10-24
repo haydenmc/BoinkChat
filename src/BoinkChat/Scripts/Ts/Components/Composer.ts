@@ -1,4 +1,6 @@
-﻿class Composer extends Component {
+﻿/// <reference path="../../definitions/boink.d.ts" />
+
+class Composer extends Component {
     public send(): void {
         Application.instance.hub.server.sendMessage("User", (<HTMLInputElement>this.shadowRoot.querySelector("input")).value);
         (<HTMLInputElement>this.shadowRoot.querySelector("input")).value = "";

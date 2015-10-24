@@ -6,15 +6,16 @@
     <script src="jquery-1.6.4.min.js"></script>
     <script src="jquery.signalr-2.2.0.min.js"></script>
     <script src="webcomponents.js"></script>
+    <script src="boink.js"></script>
     <script src="application.js"></script>
     <script src="/signalr/js"></script>
 </head>
 <body>
     <h1>Why halloooooooo</h1>
-    <ui-application>
+    <ui-boinkchat>
         <ui-chat data-context="{{messages}}"></ui-chat>
         <ui-composer></ui-composer>
-    </ui-application>
+    </ui-boinkchat>
 
     <template id="ui-chat">
         <ui-repeater>

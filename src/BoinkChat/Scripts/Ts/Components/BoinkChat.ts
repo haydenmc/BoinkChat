@@ -1,9 +1,8 @@
-﻿/// <reference path="Component.ts" />
+﻿/// <reference path="../../definitions/boink.d.ts" />
 
 declare var $: any;
 
-class Application extends Component {
-    public static instance;
+class BoinkChat extends Application {
     private _hub: any;
     public get hub(): any {
         return this._hub;
@@ -11,7 +10,6 @@ class Application extends Component {
 
     public createdCallback() {
         super.createdCallback();
-        Application.instance = this;
         this._dataContext.value = new DataModel();
 
         // Connect to SignalR
@@ -29,4 +27,4 @@ class Application extends Component {
     }
 }
 
-Component.register("ui-application", Application);
+Component.register("ui-boinkchat", BoinkChat);

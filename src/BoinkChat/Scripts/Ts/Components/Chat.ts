@@ -1,4 +1,6 @@
-﻿class Chat extends Component {
+﻿/// <reference path="../../definitions/boink.d.ts" />
+
+class Chat extends Component {
     
 }
 
