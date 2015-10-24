@@ -51,6 +51,7 @@ namespace BoinkChat
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            app.UseWebSockets();
             app.UseSignalR();
             //new ApplicationDbContext().Database.Migrate();
         }
