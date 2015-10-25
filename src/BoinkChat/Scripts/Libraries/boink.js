@@ -71,6 +71,12 @@ var Component = (function (_super) {
                 this.applyMyDataContext(clone.childNodes[i]);
             }
             this.shadowRoot.appendChild(clone);
+            if (window.ShadowDOMPolyfill) {
+                var style = this.shadowRoot.querySelector("style");
+                if (style) {
+                    style.innerHTML = window.WebComponents.ShadowCSS.shimStyle(style, this.tagName.toLowerCase());
+                }
+            }
             this.dataBinder.processBindings(this.shadowRoot);
             this.dataBinder.resolveAllBindings();
             this.processEventBindings(this.shadowRoot);

@@ -9,10 +9,30 @@
     <script src="boink.js"></script>
     <script src="application.js"></script>
     <script src="/signalr/js"></script>
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif sans-serif;
+            background-color: #000;
+            color: #fff;
+            padding: 8px;
+        }
+        h1 {
+            font-weight: 100;
+            font-size: 64px;
+            margin: 0;
+        }
+        h3 {
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+    </style>
 </head>
 <body>
-    <h1>Why halloooooooo</h1>
+    <h1>BoinkChat</h1>
+    <p>A test application for the <a href="https://github.com/haydenmc/Boink">Boink UI framework</a>.</p>
     <ui-boinkchat>
+        <h3>Messages</h3>
         <ui-chat data-context="{{messages}}"></ui-chat>
         <ui-composer></ui-composer>
     </ui-boinkchat>
@@ -30,15 +50,38 @@
             :host {
                 display: block;
             }
-            ui-message {
-                display: block;
+            .author {
+                font-weight: bold;
             }
         </style>
-        {{authorName}}: {{body}}
+        <span class="author">{{authorName}}</span>: {{body}}
     </template>
 
     <template id="ui-composer">
-        <input />
+        <style>
+            :host {
+                margin-top: 8px;
+                display: block;
+            }
+            input {
+                background: none;
+                border: none;
+                border-bottom: 2px solid #808080;
+                color: #fff;
+                padding: 4px;
+                font-size: 16px;
+            }
+            button {
+                background: none;
+                border: none;
+                font-weight: 900;
+                color: #fff;
+                text-transform: uppercase;
+                cursor: pointer;
+                font-size: 16px;
+            }
+        </style>
+        <input placeholder="Type a message" />
         <button data-event-click="send">Send</button>
     </template>
 </body>
